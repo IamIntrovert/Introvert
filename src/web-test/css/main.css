@@ -1,0 +1,26 @@
+body {
+  height: 100vh;
+}
+
+.diagram-block {
+  background-color: #000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-block {
+  background-color: #55A5BF;
+  height: 100%;
+  padding-top: 50px;
+}
+
+.apply-btn {
+  margin-top: 20;
+}
+
+.apply-btn:active {
+  opacity: 0.5;
+  transform: scale(0.95);
+}

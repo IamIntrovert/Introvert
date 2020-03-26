@@ -1,0 +1,95 @@
+{
+  "name": "blum",
+  "version": "0.0.1",
+  "private": true,
+  "babel": {
+    "presets": [
+      "module:metro-react-native-babel-preset"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-export-namespace-from",
+        {
+          "legacy": true
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "lint": "eslint .",
+    "bump": "gulp bump --gulpfile 'gulp/gulpfile.babel.js'",
+    "log-i": "react-native log-ios",
+    "ios-src-maps": "react-native bundle --platform ios --dev true --entry-file index.js --bundle-output ios-debug.bundle --sourcemap-output ios-debug.bundle.map",
+    "android-src-maps": "react-native bundle --platform android --dev true --entry-file index.js --bundle-output android-debug.bundle --sourcemap-output android-debug.bundle.map",
+    "ios-upload-src-maps": "bugsnag-sourcemaps upload --api-key 9683ef773a12af3d43244e5b5a116a2c --app-version 1.0.30 --minified-file ios-debug.bundle --source-map ios-debug.bundle.map --minified-url \"localhost:8081/main.bundle?platform=ios&dev=true&minify=false\"",
+    "add-hooks": "gulp install --gulpfile 'gulp/gulpfile.babel.js'",
+    "fix-3p": "cd node_modules/react-native && scripts/ios-install-third-party.sh && cd third-party/glog-0.3.5/ && ../../scripts/ios-configure-glog.sh && cd ../../../..",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "react-native-community/react-native-async-storage",
+    "@react-native-community/masked-view": "^0.1.6",
+    "bugsnag-react-native": "^2.23.5",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2",
+    "react": "16.9.0",
+    "react-native": "0.61.5",
+    "react-native-device-info": "^5.4.1",
+    "react-native-gesture-handler": "^1.5.3",
+    "react-native-image-processor": "https://github.com/merryejik/react-native-image-processor.git",
+    "react-native-logger": "^1.0.3",
+    "react-native-safe-area-context": "^0.6.2",
+    "react-native-screens": "^2.0.0-alpha.33",
+    "react-native-sound": "^0.11.0",
+    "react-native-webview": "^8.0.6",
+    "react-navigation": "^4.0.10",
+    "react-navigation-stack": "^2.0.16",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "rn-fetch-blob": "^0.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-export-namespace-from": "^7.8.3",
+    "@babel/runtime": "^7.8.3",
+    "@react-native-community/eslint-config": "^0.0.6",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-flowtype": "^4.6.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-native": "^3.8.1",
+    "flow-bin": "^0.116.1",
+    "git-validate": "^2.2.4",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-task-doc": "^1.0.11",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "minimist": "^1.2.0",
+    "prettier": "^1.14.3",
+    "react-test-renderer": "16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

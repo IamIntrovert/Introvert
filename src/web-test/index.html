@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+      let width=600;
+      let height=600;
+      let duration=300;
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="diagram-block col-8">
+          <div id="kaleidoscope-container"></div>
+        </div>
+        <div class="settings-block col-4">
+          <div class="form-group row">
+            <label for="number-of-directions" class="col-7 col-form-label">Directions for grow</label>
+            <div class="col-5">
+              <input class="form-control" type="text" value="4" placeholder="Number of direcctions" id="number-of-directions">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="max-poinst-per-frame" class="col-7 col-form-label">Number points per frame</label>
+            <div class="col-5">
+              <input class="form-control" type="text" value="350" placeholder="Number points per frame" id="number-poinst-per-frame">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="amount-of-reflections" class="col-7 col-form-label">Amount of reflections</label>
+            <div class="col-5">
+              <input class="form-control" type="text" value="10" placeholder="Amount of reflections" id="amount-of-reflections">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="number-of-palettes" class="col-7 col-form-label">Total palettes count</label>
+            <div class="col-5">
+              <input class="form-control" type="text" value="7" placeholder="Number of palettes" id="number-of-palettes">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="number-of-black-palettes-text-input" class="col-7 col-form-label">Black palettes count</label>
+            <div class="col-5">
+              <input class="form-control" type="text" value="3" placeholder="Black palettes count" id="number-of-black-palettes">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="frames-per-palette" class="col-7 col-form-label">Frames per palette</label>
+            <div class="col-5">
+              <input class="form-control" type="text" value="100" placeholder="Frames per palette" id="frames-per-palette">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="min-pen-size" class="col-7 col-form-label">Min pen size</label>
+            <div class="col-5">
+              <input class="form-control" type="text" value="0.5" placeholder="Min pen size" id="min-pen-size">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="max-pen-size" class="col-7 col-form-label">Max pen size</label>
+            <div class="col-5">
+              <input class="form-control" type="text" value="1" placeholder="Max pen size" id="max-pen-size">
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <button type="button" class="apply-btn btn btn-primary" onclick="resetDiagram();">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/p5.min.js"></script>
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/kaleidoscope.js"></script>
+  </body>
+</html>

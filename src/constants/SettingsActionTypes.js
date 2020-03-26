@@ -1,0 +1,2 @@
+export const SET_SOUND_STATE = 'SET_SOUND_STATE';
+export const LOAD_ALL_SETTINGS = 'LOAD_ALL_SETTINGS';

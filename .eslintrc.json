@@ -1,0 +1,68 @@
+{
+    "extends": [
+      "airbnb",
+      "plugin:flowtype/recommended",
+      "plugin:react/recommended",
+      "plugin:react-native/all"
+    ],
+    
+    "plugins": [
+      "react",
+      "react-native",
+      "prettier",
+      "flowtype"
+    ],
+
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "experimentalObjectRestSpread": true,
+      "classes": true,
+      "ecmaFeatures": {
+          "jsx": true
+      }
+    },
+
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "react-native/react-native": true
+    },
+
+    "rules": {
+      "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
+      "react/sort-comp": [2, {
+        "order": [
+          "static-methods",
+          "type-annotations",
+          "lifecycle",
+          "everything-else",
+          "/^on.+$/",
+          "/^render.+$/",
+          "render"
+        ]
+      }],
+      "react-native/no-unused-styles": 2,
+      "react-native/split-platform-components": 2,
+      "react-native/no-inline-styles": 2,
+      "react-native/no-color-literals": 2,
+      "react/default-props-match-prop-types": ["error", { "allowRequiredDefaults": true }],
+
+      "no-use-before-define": 0,
+      "comma-dangle": ["error", {
+        "objects": "always-multiline",
+        "arrays": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "never",
+        "functions": "never"
+      }],
+      "no-unused-vars": ["error", { "varsIgnorePattern": "^React$" }],
+      "object-curly-newline": ["error", { "consistent": true,  "minProperties": 10 }],
+      "import/no-extraneous-dependencies": ["error", {
+        "devDependencies": ["gulpfile.babel.js", "./gulp/*.js"] }
+      ],
+      "max-len": ["error", { "code": 80, "ignoreUrls": true }]
+    }
+}
