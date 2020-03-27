@@ -1,4 +1,4 @@
-# Blum
+# Introvert
 
 ## Install a development version
 
@@ -19,7 +19,7 @@
     
 4. Go to the root folder
     ```
-    cd ocus
+    cd Introvert
     ```
 
 5. Install local dependence:
