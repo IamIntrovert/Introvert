@@ -39,7 +39,7 @@
     "@react-native-community/async-storage": "react-native-community/react-native-async-storage",
     "@react-native-community/masked-view": "^0.1.6",
     "bugsnag-react-native": "^2.23.5",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.3.2",
     "react": "16.9.0",
